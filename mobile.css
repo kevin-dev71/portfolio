@@ -1,5 +1,10 @@
+body {
+  background-position: left center;
+}
+
 .contenedor {
   flex-direction: column;
+  padding: 40px;
 }
 
 .contenedor__mensaje {
