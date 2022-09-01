@@ -1,0 +1,12 @@
+.contenedor {
+  flex-direction: column;
+}
+
+.contenedor__mensaje {
+  width: 100%;
+}
+
+.form {
+  width: 100%;
+  margin: 0;
+}
