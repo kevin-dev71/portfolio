@@ -12,3 +12,8 @@ Completa el código que estan en el archivo styles.css; de modo que la pagina we
 ![LarnU](./assets/img/modelo.jpg)
 
 La carpeta assets no tocar por ningun motivo, de lo contrario se rompera la estructura.
+
+# Instructions
+1. run `npm install` or `yarn`
+2. compile sass files `npm run sass` or `yarn sass`
+3. open a live server.

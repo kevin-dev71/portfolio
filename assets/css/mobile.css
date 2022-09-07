@@ -1,0 +1,7 @@
+.container {
+  grid-template-rows: 1fr 1fr 3fr 3fr 2fr 2fr 2fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: "item1" "item2" "item3" "item4" "item7" "item6" "item5";
+}
+
+/*# sourceMappingURL=mobile.css.map */

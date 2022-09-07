@@ -10,52 +10,45 @@ body {
   padding: 0;
   min-height: 100vh;
 }
-
-.item {
+.container .item {
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
 }
-
-.item5,
-.item6,
-.item7 {
-  color: #000;
-}
-
-.item1 {
+.container .item1 {
   grid-area: item1;
   background-color: #0e1628;
 }
-
-.item2 {
+.container .item2 {
   grid-area: item2;
   background-color: #f13a4b;
 }
-
-.item3 {
+.container .item3 {
   grid-area: item3;
   background-color: #4685c4;
 }
-
-.item4 {
+.container .item4 {
   grid-area: item4;
   background-color: #223349;
 }
-
-.item5 {
+.container .item5 {
   grid-area: item5;
   background-color: #bee3e5;
 }
-
-.item6 {
+.container .item6 {
   grid-area: item6;
   background-color: #47bd99;
 }
-
-.item7 {
+.container .item7 {
   grid-area: item7;
   background-color: #ffd170;
 }
+.container .item5,
+.container .item6,
+.container .item7 {
+  color: #000;
+}
+
+/*# sourceMappingURL=styles.css.map */
