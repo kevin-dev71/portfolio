@@ -4,6 +4,7 @@
 <br>
 
 # Desafío: css_grid
+- Migrar el desafio anterior a sass
 
 ## Instrucciones
 
