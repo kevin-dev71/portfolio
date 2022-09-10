@@ -1,0 +1,27 @@
+@mixin typewritter($chars-length) {
+  display: block;
+  white-space: nowrap;
+  border-right: 4px solid var(--text-color);
+  width: #{$chars-length}ch;
+
+  animation: typing 2s steps($chars-length),
+    blink 0.5s infinite step-end alternate;
+  overflow: hidden;
+
+  @media (max-width: 725px) {
+    border-right: none;
+    display: revert;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}

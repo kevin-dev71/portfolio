@@ -1,0 +1,37 @@
+.nav {
+  margin: 80px 0;
+  &__item {
+    padding: 12px 0;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: fit-content;
+    font-weight: var(--font-medium);
+    color: var(--text-color-secondary);
+    cursor: pointer;
+    transition: color ease-in-out 0.1s;
+    text-transform: uppercase;
+
+    &:hover {
+      color: var(--text-color);
+
+      .nav__link--separator {
+        width: 38px;
+      }
+    }
+  }
+
+  &__link--index {
+    width: 26px;
+  }
+
+  &__link--separator {
+    width: 26px;
+    height: 1px;
+    background-color: var(--text-color-secondary);
+    transition: width ease-in-out 0.2s;
+  }
+}
