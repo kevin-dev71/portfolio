@@ -25,6 +25,7 @@
   --bg-color-secondary: #202022;
   --text-color: #fff;
   --text-color-secondary: #949494;
+  --white: #f5f5fa;
 }
 
 /*=============== BASE ===============*/
@@ -120,6 +121,12 @@ img {
   animation: typing 2s steps(32), blink 0.5s infinite step-end alternate;
   overflow: hidden;
 }
+@media (max-width: 725px) {
+  .main__personal-info .typewritter {
+    border-right: none;
+    display: revert;
+  }
+}
 .main__personal-info p {
   margin: 12px 0;
   color: var(--text-color-secondary);
@@ -135,6 +142,7 @@ img {
 .main__personal-info footer {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 .main__personal-info footer a {
   display: flex;
@@ -157,6 +165,11 @@ img {
 .main__content .projects__masonry li {
   break-inside: avoid;
   margin-bottom: var(--gap);
+}
+@media (max-width: 1123px) {
+  .main__content .projects__masonry {
+    column-count: 1;
+  }
 }
 .main__content .projects .projects__card {
   padding: 32px 48px;
@@ -204,16 +217,59 @@ img {
 .main__content .projects .projects__card:hover {
   transform: scale(1.01);
 }
+@media (max-width: 1500px) {
+  .main__content .projects .projects__card--body {
+    font-size: 1rem;
+  }
+}
 .main__content .about {
-  margin-top: 30px;
+  margin-top: 200px;
+}
+.main__content .about__avatar {
+  border-radius: 50%;
 }
 .main__content .about h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin-bottom: 14px;
 }
 .main__content .about__content {
   padding: 32px 48px;
   background-color: var(--bg-color-secondary);
   border-radius: 6px;
+}
+.main__content .about__content p {
+  margin: 16px 0;
+}
+.main__content .tech {
+  margin: 200px 0;
+}
+.main__content .tech h2 {
+  margin-bottom: 14px;
+}
+.main__content .tech__content {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.main__content .credit {
+  margin-bottom: 60px;
+  font-size: 0.75rem;
+  line-height: 18px;
+  color: var(--text-color-secondary);
+}
+.main__content .credit a {
+  color: var(--white);
+}
+@media (max-width: 875px) {
+  .main__container {
+    flex-direction: column;
+  }
+  .main__personal-info {
+    position: revert;
+    margin-bottom: 100px;
+  }
 }
 
 .img-wrapper {
@@ -222,6 +278,13 @@ img {
   border-radius: 50%;
   overflow: hidden;
   margin-right: 32px;
+}
+
+.tag {
+  padding: 8px 16px;
+  background-color: var(--bg-color-secondary);
+  border-radius: 12px;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=styles.css.map */

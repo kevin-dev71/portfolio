@@ -49,6 +49,7 @@
     footer {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
 
       a {
         display: flex;
@@ -80,6 +81,10 @@
         li {
           break-inside: avoid;
           margin-bottom: var(--gap);
+        }
+
+        @media (max-width: 1123px) {
+          column-count: 1;
         }
       }
       .projects__card {
@@ -137,13 +142,26 @@
         &:hover {
           transform: scale(1.01);
         }
+
+        @media (max-width: 1500px) {
+          &--body {
+            font-size: calc(16rem / 16);
+          }
+        }
       }
     }
 
     .about {
-      margin-top: 30px;
+      margin-top: 200px;
+
+      &__avatar {
+        border-radius: 50%;
+      }
 
       h2 {
+        display: flex;
+        align-items: center;
+        gap: 8px;
         margin-bottom: 14px;
       }
 
@@ -151,7 +169,46 @@
         padding: 32px 48px;
         background-color: var(--bg-color-secondary);
         border-radius: 6px;
+
+        p {
+          margin: 16px 0;
+        }
       }
+    }
+
+    .tech {
+      margin: 200px 0;
+
+      h2 {
+        margin-bottom: 14px;
+      }
+
+      &__content {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+    }
+
+    .credit {
+      margin-bottom: 60px;
+      font-size: calc(12rem / 16);
+      line-height: 18px;
+      color: var(--text-color-secondary);
+      a {
+        color: var(--white);
+      }
+    }
+  }
+
+  @media (max-width: 875px) {
+    &__container {
+      flex-direction: column;
+    }
+
+    &__personal-info {
+      position: revert;
+      margin-bottom: 100px;
     }
   }
 }
@@ -162,4 +219,11 @@
   border-radius: 50%;
   overflow: hidden;
   margin-right: 32px;
+}
+
+.tag {
+  padding: 8px 16px;
+  background-color: var(--bg-color-secondary);
+  border-radius: 12px;
+  text-transform: uppercase;
 }

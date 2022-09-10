@@ -7,6 +7,11 @@
   animation: typing 2s steps($chars-length),
     blink 0.5s infinite step-end alternate;
   overflow: hidden;
+
+  @media (max-width: 725px) {
+    border-right: none;
+    display: revert;
+  }
 }
 
 @keyframes typing {
