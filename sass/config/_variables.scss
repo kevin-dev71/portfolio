@@ -1,0 +1,21 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --main-title: 3rem;
+  --text-subtitle: 1.5rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-black: 900;
+
+  /*========== Colors ==========*/
+  --bg-color: #151515;
+  --bg-color-secondary: #202022;
+  --text-color: #fff;
+  --text-color-secondary: #949494;
+}

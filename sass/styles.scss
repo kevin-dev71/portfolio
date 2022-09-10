@@ -1,61 +1,165 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'poppins';
+@use 'mixins/typewritter' as m;
+@import 'config/variables';
+@import 'config/base';
+@import 'components/navbar';
+
+.main {
+  width: 80%;
+  margin: 0 auto;
+
+  &__container {
+    display: flex;
+    gap: 48px;
+    padding-top: 88px;
+  }
+
+  &__personal-info {
+    flex: 1 1 50%;
+    position: sticky;
+    height: fit-content;
+    top: 88px;
+
+    h1 {
+      font-size: var(--main-title);
+    }
+
+    .subtitle {
+      font-size: var(--text-subtitle);
+    }
+
+    .typewritter {
+      @include m.typewritter(32);
+    }
+
+    p {
+      margin: 12px 0;
+      color: var(--text-color-secondary);
+
+      span {
+        color: var(--text-color);
+        text-decoration: underline;
+      }
+
+      &::first-letter {
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+    }
+
+    footer {
+      display: flex;
+      align-items: center;
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--text-color);
+        margin-left: 24px;
+      }
+
+      img {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &__content {
+    // overflow-y: auto;
+    // -webkit-overflow-scrolling: touch;
+    .projects {
+      h2 {
+        margin-bottom: 14px;
+      }
+
+      &__masonry {
+        --gap: 16px;
+        column-count: 2;
+        column-gap: var(--gap);
+
+        li {
+          break-inside: avoid;
+          margin-bottom: var(--gap);
+        }
+      }
+      .projects__card {
+        padding: 32px 48px;
+        background-color: var(--bg-color-secondary);
+        border-radius: 6px;
+        transition: transform ease-in-out 0.4s;
+
+        header {
+          p {
+            font-size: calc(12rem / 16);
+            line-height: 15px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: bold;
+          }
+
+          .projects__card--date {
+            font-size: calc(14rem / 16);
+            color: var(--text-color-secondary);
+          }
+        }
+
+        &--body {
+          margin-top: 83px;
+          margin-bottom: 26px;
+          color: var(--text-color-secondary);
+          font-size: calc(24rem / 16);
+          font-weight: var(--font-semi-bold);
+          transition: color ease-in-out 0.4s;
+
+          &:hover {
+            color: var(--text-color);
+          }
+        }
+
+        footer {
+          display: flex;
+          align-items: center;
+          gap: 42px;
+
+          a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: calc(12rem / 16);
+            color: var(--text-color);
+          }
+
+          img {
+            vertical-align: middle;
+          }
+        }
+
+        &:hover {
+          transform: scale(1.01);
+        }
+      }
+    }
+
+    .about {
+      margin-top: 30px;
+
+      h2 {
+        margin-bottom: 14px;
+      }
+
+      &__content {
+        padding: 32px 48px;
+        background-color: var(--bg-color-secondary);
+        border-radius: 6px;
+      }
+    }
+  }
 }
 
-.container {
-  display: grid;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-
-  .item {
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-  }
-
-  .item1 {
-    grid-area: item1;
-    background-color: #0e1628;
-  }
-
-  .item2 {
-    grid-area: item2;
-    background-color: #f13a4b;
-  }
-
-  .item3 {
-    grid-area: item3;
-    background-color: #4685c4;
-  }
-
-  .item4 {
-    grid-area: item4;
-    background-color: #223349;
-  }
-
-  .item5 {
-    grid-area: item5;
-    background-color: #bee3e5;
-  }
-
-  .item6 {
-    grid-area: item6;
-    background-color: #47bd99;
-  }
-
-  .item7 {
-    grid-area: item7;
-    background-color: #ffd170;
-  }
-
-  .item5,
-  .item6,
-  .item7 {
-    color: #000;
-  }
+.img-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 32px;
 }

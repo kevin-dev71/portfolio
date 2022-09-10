@@ -4,42 +4,213 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Css Grid</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>Kevin Au - Fullstack dev | Portfolio</title>
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="./assets/css/mobile.css"
-      media="screen and (max-width: 640px)"
-    />
-    <link
-      rel="stylesheet"
-      href="./assets/css/tablet.css"
-      media="screen and (min-width: 640px) and (max-width: 1280px)"
-    />
-    <link
-      rel="stylesheet"
-      href="./assets/css/desktop.css"
-      media="screen and (min-width: 1280px)"
-    />
   </head>
 
   <body>
-    <div class="container">
-      <div class="item item1">Header</div>
-      <div class="item item2">Menu</div>
-      <div class="item item3">Hero</div>
-      <div class="item item4">Main</div>
-      <div class="item item5">Image</div>
-      <div class="item item6">Extra</div>
-      <div class="item item7">Banner</div>
-    </div>
+    <main class="main main__container">
+      <!-- LEFT COLUMN -->
+      <section class="main main__personal-info">
+        <h1>Kevin Au</h1>
+        <span class="subtitle typewritter"
+          >Fullstack Developer | Freelancer</span
+        >
+        <p>
+          Passionate coder living in Costa Rica, 3 years experience coding with
+          <span>Javascript, Typescript, React, NextJs.</span> Able to
+          effectively self-manage during independent projects, as well as
+          collaborate as part of a productive team.
+        </p>
+
+        <!-- MENU -->
+        <header class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#projects">
+                <span class="nav__link--index">01</span>
+                <span class="nav__link--separator"></span>
+                <span class="nav__link--text">Projects</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#about">
+                <span class="nav__link--index">02</span>
+                <span class="nav__link--separator"></span>
+                <span class="nav__link--text">About me</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link">
+                <span class="nav__link--index">03</span>
+                <span class="nav__link--separator"></span>
+                <span class="nav__link--text">My Tech Stack</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link">
+                <span class="nav__link--index">04</span>
+                <span class="nav__link--separator"></span>
+                <span class="nav__link--text">Get in touch</span>
+              </a>
+            </li>
+          </ul>
+        </header>
+
+        <!-- FOOTER -->
+        <footer>
+          <div class="img-wrapper">
+            <img loading="lazy" src="/assets/img/avatar.jpeg" alt="Kevin" />
+          </div>
+          <a href="https://github.com/kevin-dev71" target="_blank">
+            <img loading="lazy" src="/assets/img/github.svg" alt="github" />
+            <span>GitHub</span>
+            <img loading="lazy" src="/assets/img/link.svg" alt="" />
+          </a>
+          <a href="https://www.linkedin.com/in/kevin-au-tam/" target="_blank">
+            <img loading="lazy" src="/assets/img/linkedin.svg" alt="linkedin" />
+            <span>Linkedin</span>
+            <img loading="lazy" src="/assets/img/link.svg" alt="" />
+          </a>
+        </footer>
+      </section>
+
+      <!-- RIGHT COLUMN -->
+      <section class="main main__content">
+        <!-- PROJECTS -->
+        <div class="projects" id="projects">
+          <h2>PROJECTS</h2>
+          <ul class="projects__masonry">
+            <!-- PROJECT ONE -->
+            <li>
+              <article class="projects__card">
+                <header>
+                  <p>Marcadores 247</p>
+                  <span class="projects__card--date">Jun, 2022 - Present</span>
+                </header>
+                <div class="projects__card--body">
+                  <p>
+                    Livescore, results, stats, live odds and scores from all
+                    global matches of different sports service. Build with React
+                    Nextjs and Nodejs.
+                  </p>
+                </div>
+                <!-- PROJECT CARD FOOTER -->
+                <footer>
+                  <a href="https://marcadores247.com" target="_blank">
+                    <span>Visit</span>
+                    <img loading="lazy" src="/assets/img/link.svg" alt="" />
+                  </a>
+                </footer>
+              </article>
+            </li>
+            <!-- PROJECT TWO -->
+            <li>
+              <article class="projects__card">
+                <header>
+                  <p>Yiess</p>
+                  <span class="projects__card--date">Sep, 2021 - Apr 2022</span>
+                </header>
+                <div class="projects__card--body">
+                  <p>
+                    Aiko.io is a NSFW NFT, descentralized marketplace and
+                    staking project based on solana blockchain.
+                  </p>
+                </div>
+                <!-- PROJECT CARD FOOTER -->
+                <footer>
+                  <a href="https://aiko.io/" target="_blank">
+                    <span>Visit (+18)</span>
+                    <img loading="lazy" src="/assets/img/link.svg" alt="" />
+                  </a>
+                </footer>
+              </article>
+            </li>
+            <!-- PROJECT THREE -->
+            <li>
+              <article class="projects__card">
+                <header>
+                  <p>FrontEndCafe CMYK 4.0</p>
+                  <span class="projects__card--date">Jul, 2021 - Sep 2021</span>
+                </header>
+                <div class="projects__card--body">
+                  <p>
+                    Tutti Frutti es un juego de lápiz y papel que consiste en
+                    buscar palabras a partir de una letra y de una serie de
+                    categorías definidas previamente. En esta oportunidad se
+                    llevó a lo digital, donde se podrá disfrutar jugando con
+                    amigos, para divertirse y pasar un buen rato. El ganador del
+                    juego es quien logre conseguir más puntos a lo largo de las
+                    diferentes rondas.
+                  </p>
+                </div>
+                <!-- PROJECT CARD FOOTER -->
+                <footer>
+                  <a href="https://cmyk-strawberry.web.app/" target="_blank">
+                    <span>Visit</span>
+                    <img loading="lazy" src="/assets/img/link.svg" alt="" />
+                  </a>
+                  <a
+                    href="https://github.com/frontendcafe/cmyk-strawberry"
+                    target="_blank"
+                  >
+                    <img
+                      loading="lazy"
+                      src="/assets/img/github.svg"
+                      alt="github"
+                    />
+                    <span>GitHub</span>
+                    <img loading="lazy" src="/assets/img/link.svg" alt="" />
+                  </a>
+                </footer>
+              </article>
+            </li>
+            <!-- PROJECT FOUR -->
+            <li>
+              <article class="projects__card">
+                <header>
+                  <p>FrontEndCafe CMYK 5.0</p>
+                  <span class="projects__card--date">Aug, 2022 - Sep 2022</span>
+                </header>
+                <div class="projects__card--body">
+                  <p>
+                    Para esta edición nos juntamos varios coders para crear una
+                    web de flashcards, una herramienta fantástica para
+                    estudiantes.
+                  </p>
+                </div>
+                <!-- PROJECT CARD FOOTER -->
+                <footer>
+                  <a href="#">
+                    <span>Visit</span>
+                    <img loading="lazy" src="/assets/img/link.svg" alt="" />
+                  </a>
+                  <a
+                    href="https://github.com/frontendcafe/air-flashcards"
+                    target="_blank"
+                  >
+                    <img
+                      loading="lazy"
+                      src="/assets/img/github.svg"
+                      alt="github"
+                    />
+                    <span>GitHub</span>
+                    <img loading="lazy" src="/assets/img/link.svg" alt="" />
+                  </a>
+                </footer>
+              </article>
+            </li>
+          </ul>
+        </div>
+        <!-- ABOUT ME -->
+        <div class="about" id="#about">
+          <h2>ABOUT ME</h2>
+          <div class="about__content">
+            <p></p>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
