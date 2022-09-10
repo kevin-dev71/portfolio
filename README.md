@@ -3,8 +3,8 @@
 <br>
 <br>
 
-# Desafío: css_grid
-- Migrar el desafio anterior a sass
+# Desafío: portfolio modulo1 
+- Hacer un portfolio con HTML y CSS
 
 ## Instrucciones
 
@@ -12,4 +12,3 @@
 2. compile sass files `npm run sass` or `yarn sass`
 3. open a live server.
 
-![LarnU](./assets/img/modelo.jpg)
